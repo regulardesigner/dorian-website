@@ -81,7 +81,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="p-6 max-w-6xl mx-auto">
     <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-  <h1 class="text-3xl md:text-4xl font-bold text-gray-500">
+  <h1 class="text-3xl md:text-4xl font-bold text-gray-200">
     Dorian Tailhades - Videofolio
   </h1>
   <a href="tel:+1234567890"
@@ -97,10 +97,10 @@ onBeforeUnmount(() => {
     v-for="cat in categories"
     :key="cat"
     @click="toggleCategory(cat)"
-    class="px-4 py-2 rounded-full border text-sm font-medium transition hover:bg-blue-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+    class="px-3 py-1 rounded-sm border border-gray-600 text-sm font-medium transition focus:outline-none"
     :class="{
-      'bg-blue-600 text-white border-blue-600': selectedCategory === cat,
-      'border-gray-300 text-gray-600': selectedCategory !== cat
+      'bg-gray-600 text-white': selectedCategory === cat,
+      'border-gray-600 text-gray-400': selectedCategory !== cat
     }"
   >
     {{ cat.charAt(0).toUpperCase() + cat.slice(1) }}
@@ -121,7 +121,7 @@ onBeforeUnmount(() => {
       <div
         v-for="(video, index) in filteredVideos"
         :key="index"
-        class="border rounded-md shadow-sm hover:shadow-md transition bg-white overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-blue-500"
+        class="shadow-sm hover:shadow-md transition bg-gray-950 overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-blue-500"
         @click="openPlayer(video)"
         tabindex="0"
         @keydown.enter.prevent="openPlayer(video)"
@@ -132,10 +132,10 @@ onBeforeUnmount(() => {
           :alt="video.title"
           class="w-full aspect-video object-cover"
         />
-        <div class="p-4">
-          <h2 class="text-lg font-semibold mb-1">{{ video.title }}</h2>
-          <p class="text-xs text-gray-500 mb-1"><span class="font-medium capitalize text-white bg-blue-600 px-1 rounded-sm">{{ video.category }}</span> {{ video.date }}</p>
-          <p class="text-sm text-gray-700">{{ video.desc }}</p>
+        <div class="py-4">
+          <h2 class="text-lg text-white font-semibold mb-1">{{ video.title }}</h2>
+          <p class="text-xs text-gray-100 mb-1"><span class="font-medium capitalize text-white bg-blue-600 px-1 rounded-sm">{{ video.category }}</span> {{ video.date }}</p>
+          <p class="text-sm text-gray-200">{{ video.desc }}</p>
         </div>
       </div>
     </div>
@@ -146,7 +146,7 @@ onBeforeUnmount(() => {
       class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
       @click="closePlayer"
     >
-      <div class="relative w-full max-w-4xl">
+      <div class="relative w-full max-w-4xl bg-black p-3">
         <button
           @click="closePlayer"
           class="absolute top-2 right-2 text-white text-2xl font-bold hover:text-gray-300"
@@ -156,14 +156,15 @@ onBeforeUnmount(() => {
         </button>
         <div class="w-full aspect-video">
           <iframe
-            :src="`https://www.youtube.com/embed/${getYoutubeId(activeVideo.link)}?autoplay=1`"
+            :src="`https://www.youtube.com/embed/${getYoutubeId(activeVideo.link)}?playlist=${getYoutubeId(activeVideo.link)}&loop=1&autoplay=1`"
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="autoplay; picture-in-picture"
             allowfullscreen
             class="w-full h-full rounded-xl"
           ></iframe>
         </div>
         <h2 class="text-white text-lg font-semibold mt-4">{{ activeVideo.title }}</h2>
+        <p class="text-gray-200 text-sm mt-1">{{ activeVideo.desc }}</p>
       </div>
     </div>
     <footer class="mt-6">

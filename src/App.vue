@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 min-h-screen test-tailwind-class">
+  <div class="bg-gray-950 min-h-screen test-tailwind-class">
     <PortolioLightBox />
   </div>
 </template>
