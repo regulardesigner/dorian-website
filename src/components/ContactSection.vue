@@ -1,13 +1,14 @@
 <template>
-  <section id="contact" class="py-16 bg-white">
+  <section id="contact" class="py-16 bg-gray-950">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Contact</h2>
-      <p v-if="alertMessage" class="mb-2 inline-block px-2.5 py-1 border rounded-md text-white" :class="{ 'bg-green-700': alertState === 'success', 'bg-red-600': alertState === 'error' }">{{ alertMessage }}</p>
+      <h2 class="text-3xl font-bold text-gray-100 mb-4">Contact</h2>
+      <p v-if="alertMessage" aria-live="polite" class="mb-2 inline-block px-2.5 py-1 border rounded-sm text-white" :class="{ 'bg-green-700': alertState === 'success', 'bg-red-600': alertState === 'error' }">{{ alertMessage }}</p>
       <form ref="form" class="grid grid-cols-1 gap-6 max-w-xl" @submit.prevent="sendEmail">
-        <input v-model="name" type="text" name="user_name" placeholder="Nom" class="border border-gray-300 rounded-md p-2" />
-        <input v-model="email" type="email" name="user_email" placeholder="Email" class="border border-gray-300 rounded-md p-2" />
-        <textarea v-model="message" name="user_message" rows="4" placeholder="Message" class="border border-gray-300 rounded-md p-2"></textarea>
-        <button type="submit" class="bg-indigo-600 text-white py-2 px-4 rounded-md">Envoyer</button>
+        <input v-model="name" type="text" name="user_name" placeholder="name" required class="border border-gray-300 rounded-sm p-2" />
+        <input v-model="email" type="email" name="user_email" placeholder="email" required class="border border-gray-300 rounded-sm p-2" />
+        <textarea v-model="message" name="user_message" rows="4" placeholder="message" required class="border border-gray-300 rounded-sm p-2"></textarea>
+
+        <button type="submit" class="p-2 rounded-sm border border-gray-600 text-sm font-medium transition focus:outline-none border-gray-600 text-gray-400">Send</button>
       </form>
     </div>
   </section>
@@ -44,15 +45,16 @@ export default {
         })
         .then(
           () => {
-            console.log('SUCCESS!');
             this.alertState = 'success';
             this.alertMessage = 'Message sent successfully!';
-            this.$refs.form.reset();
+            // reset the form fields
+            this.email = '';
+            this.name = '';
+            this.message = '';
           },
           (error) => {
-            console.log('FAILED...', error.text);
             this.alertState = 'error';
-            this.alertMessage = 'Failed to send message. Please try again later.';
+            this.alertMessage = `Failed to send message. Please try again later. ${error?.text}`;
           },
         );
     },
