@@ -30,6 +30,11 @@ const filteredVideos = computed(() => {
   return list
 })
 
+// chemin public (Vue CLI) pour les miniatures locales
+// on force une terminaison par un seul slash pour éviter '/img' ou '//img'
+const publicPath = (process.env.BASE_URL || "/").replace(/\/?$/, "/")
+
+
 // --- fonctions YouTube ---
 function getYoutubeId(url) {
   if (Array.isArray(url)) url = url[0]
@@ -40,8 +45,11 @@ function getYoutubeId(url) {
   return match && match[1].length === 11 ? match[1] : null
 }
 
-function getYoutubeThumbnail(url) {
-  const id = getYoutubeId(url)
+function getYoutubeThumbnail(video) {
+  if (video.thumbnail) {
+    return `${publicPath}img/${video.thumbnail}`
+  }
+  const id = getYoutubeId(video.link)
   return id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : ""
 }
 
@@ -128,7 +136,7 @@ onBeforeUnmount(() => {
         @keydown.space.prevent="openPlayer(video)"
       >
         <img
-          :src="getYoutubeThumbnail(video.link)"
+          :src="getYoutubeThumbnail(video)"
           :alt="video.title"
           class="w-full aspect-video object-cover"
         />
