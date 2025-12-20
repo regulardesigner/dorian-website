@@ -1,5 +1,12 @@
 [
   {
+    "title": "Pub web Spider Deck Earl Skateboards",
+    "link": "https://youtu.be/R2pkF-G_nh0",
+    "desc": "fully self-produced project – from concept and cinematography to editing, sound design, and final delivery.",
+    "category": "production",
+    "date": "2025-05-01"
+  },
+  {
     "title": "Plan self filming voiture",
     "link": "https://youtu.be/X4tUoimipx4",
     "desc": "fully self-produced project – from concept and cinematography to editing, sound design, and final delivery.",
@@ -91,11 +98,39 @@
     "thumbnail": "AfZlQ7kqr68.jpeg"
   },
   {
+    "title": "Minecraft animated Intros (2019–2020) #1",
+    "link": "https://youtu.be/7CW1LEIg0BE",
+    "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
+    "category": "animation",
+    "date": "2019-06-19"
+  },
+  {
+    "title": "Minecraft animated Intros (2019–2020) #2",
+    "link": "https://youtu.be/CT9rd8bse20",
+    "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
+    "category": "animation",
+    "date": "2019-08-29"
+  },
+  {
+    "title": "Minecraft animated Intros (2019–2020) #3",
+    "link": "https://youtu.be/hGi0P6Y4kd8",
+    "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
+    "category": "animation",
+    "date": "2020-08-09"
+  },
+  {
+    "title": "Minecraft animated Intros (2019–2020) #4",
+    "link": "https://youtu.be/80GXlc8Lqz4",
+    "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
+    "category": "animation",
+    "date": "2020-05-04"
+  },
+  {
     "title": "Golempro Text Intro (2018)",
     "link": "https://youtu.be/ytmyvcfSGFw",
     "desc": "3D animated intro in Cinema4D, with additional VFX and compositing in After Effects.",
     "category": "animation",
-    "date": "2018-01-01",
+    "date": "2018-09-03",
     "thumbnail": "ytmyvcfSGFw.jpeg"
   },
   {
@@ -119,35 +154,20 @@
     "link": "https://youtu.be/eJV_DhOQo8Y",
     "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
     "category": "animation",
-    "date": "2018-04-01",
-    "thumbnail": "eJV_DhOQo8Y.jpeg"
+    "date": "2018-04-01"
   },
   {
-    "title": "Minecraft animated Intros (2019–2020)",
-    "link": "https://youtu.be/7CW1LEIg0BE",
-    "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
+    "title": "Motion Graphic Animated Text Intro",
+    "link": "https://youtu.be/k2NLwMQ3VzI",
+    "desc": "Custom animated text intros in Cinema4D and After Effects, including typography design, lighting, animation, and VFX.",
     "category": "animation",
-    "date": "2020-01-01"
+    "date": "2018-08-14"
   },
   {
-    "title": "Minecraft animated Intros (2019–2020)",
-    "link": "https://youtu.be/CT9rd8bse20",
-    "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
+    "title": "Motion Graphic Animated Text Intro",
+    "link": "https://youtu.be/2AvVm1OBvFg",
+    "desc": "Custom animated text intros in Cinema4D and After Effects, including typography design, lighting, animation, and VFX.",
     "category": "animation",
-    "date": "2020-01-01"
-  },
-  {
-    "title": "Minecraft animated Intros (2019–2020)",
-    "link": "https://youtu.be/hGi0P6Y4kd8",
-    "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
-    "category": "animation",
-    "date": "2020-01-01"
-  },
-  {
-    "title": "Minecraft animated Intros (2019–2020)",
-    "link": "https://youtu.be/80GXlc8Lqz4",
-    "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
-    "category": "animation",
-    "date": "2020-01-01"
+    "date": "2018-11-04"
   }
 ]
