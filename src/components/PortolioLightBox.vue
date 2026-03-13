@@ -127,8 +127,8 @@ onBeforeUnmount(() => {
     <!-- video cards -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div
-        v-for="(video, index) in filteredVideos"
-        :key="index"
+        v-for="video in filteredVideos"
+        :key="video.link"
         class="shadow-sm hover:shadow-md transition bg-gray-950 overflow-hidden cursor-pointer focus:outline-none focus:ring-4 focus:ring-blue-500"
         @click="openPlayer(video)"
         tabindex="0"
