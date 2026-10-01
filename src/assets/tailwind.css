@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Design tokens (RGB channels so Tailwind opacity modifiers work).
+     Single accent colour on purpose: tungsten amber. */
+  :root {
+    --bg: 11 12 14;               /* #0B0C0E page background */
+    --bg-raised: 16 18 21;        /* #101215 raised surfaces */
+    --text: 236 237 238;          /* #ECEDEE primary text */
+    --text-dim: 138 141 147;      /* #8A8D93 secondary text */
+    --text-faint: 85 88 94;       /* #55585E decorative only — fails AA contrast for text */
+    --hairline: 36 38 42;         /* #24262A dividers */
+    --hairline-strong: 53 55 60;  /* #35373C ticks, borders */
+    --accent: 217 164 65;         /* #D9A441 */
+    --accent-dim: 122 101 50;     /* #7A6532 */
+
+    color-scheme: dark;
+  }
+
+  html {
+    @apply bg-bg text-text;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Prevent background scroll while the video dialog is open */
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
+
+  body {
+    @apply font-sans;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-accent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Archivo', sans-serif;
+    font-stretch: 125%;
+    font-weight: 700;
+  }
+
+  .wrap {
+    @apply mx-auto max-w-page px-5 sm:px-8;
+  }
+}
