@@ -1,6 +1,13 @@
 [
   {
-    "title": "DIY anamorphic 1.25x fisheye test",
+    "title": "StellaVision t-shirts ad — Domaine de Briat",
+    "link": "https://youtu.be/rZMwe5G1_4w",
+    "desc": "fully self-produced project – from concept and cinematography to editing, sound design, and final delivery.",
+    "category": "production",
+    "date": "2025-08-15"
+  },
+  {
+    "title": "DIY anamorphic 1.25x fisheye — Shooting test",
     "link": "https://youtu.be/t-YsmSW5ahY",
     "desc": "fully self-produced project – from concept and cinematography to editing, sound design, and final delivery.",
     "category": "production",
@@ -21,7 +28,7 @@
     "date": "2025-05-01"
   },
   {
-    "title": "Plan self filming — voiture",
+    "title": "Plan self filming — Driving Micra",
     "link": "https://youtu.be/X4tUoimipx4",
     "desc": "fully self-produced project – from concept and cinematography to editing, sound design, and final delivery.",
     "category": "production",
@@ -137,24 +144,14 @@
     "link": "https://youtu.be/ytmyvcfSGFw",
     "desc": "3D animated intro in Cinema4D, with additional VFX and compositing in After Effects.",
     "category": "animation",
-    "date": "2018-09-03",
-    "thumbnail": "ytmyvcfSGFw.jpeg"
-  },
-  {
-    "title": "Hope Text Intro (2018)",
-    "link": "https://youtu.be/2AvVm1OBvFg",
-    "desc": "3D animated intro in Cinema4D, with additional VFX and compositing in After Effects.",
-    "category": "animation",
-    "date": "2018-02-01",
-    "thumbnail": "2AvVm1OBvFg.jpeg"
+    "date": "2018-09-03"
   },
   {
     "title": "SoMuchSkill Minecraft animated Intro (2018)",
     "link": "https://youtu.be/NP60DEd8LSQ",
     "desc": "Custom Minecraft animated intros in Cinema4D, including rigging, lighting, animation, and VFX.",
     "category": "animation",
-    "date": "2018-03-01",
-    "thumbnail": "NP60DEd8LSQ.jpeg"
+    "date": "2018-03-01"
   },
   {
     "title": "Cripu Minecraft animated Intro (2018)",
