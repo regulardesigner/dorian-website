@@ -30,7 +30,7 @@ import TimelineRule from './TimelineRule.vue'
       >
         <span class="h-[7px] w-[7px] shrink-0 rounded-full bg-accent shadow-[0_0_0_3px_rgb(var(--accent)/0.14)]" aria-hidden="true"></span>
         Available for new projects
-        <span class="text-accent transition-transform group-hover:translate-x-0.5 motion-reduce:transition-none" aria-hidden="true">→</span>
+        <span class="text-accent transition-transform group-hover:translate-y-0.5 motion-reduce:transition-none" aria-hidden="true">↓</span>
       </a>
     </div>
 
