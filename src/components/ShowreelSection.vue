@@ -58,11 +58,6 @@ const playing = ref(false)
             <path d="M16 13l12 7-12 7z" fill="currentColor" />
           </svg>
         </span>
-
-        <span class="absolute bottom-4 left-4 flex items-center gap-2 text-sm text-text sm:bottom-6 sm:left-6">
-          <span class="h-[7px] w-[7px] rounded-full bg-accent" aria-hidden="true"></span>
-          Play showreel
-        </span>
       </button>
     </div>
   </section>
