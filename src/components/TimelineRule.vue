@@ -1,6 +1,7 @@
 <script setup>
-// Decorative separator styled like an NLE timeline track
-const TICKS = 24
+// Decorative separator styled like an NLE timeline track.
+// 4n + 1 ticks so the rule starts and ends on a major tick (major, 3 minor, major…)
+const TICKS = 25
 </script>
 
 <template>
@@ -11,7 +12,7 @@ const TICKS = 24
         v-for="n in TICKS"
         :key="n"
         class="w-px"
-        :class="n % 4 === 0 ? 'h-3.5 bg-faint' : 'h-2 bg-hairline-strong'"
+        :class="(n - 1) % 4 === 0 ? 'h-3.5 bg-faint' : 'h-2 bg-hairline-strong'"
       ></span>
     </div>
   </div>
