@@ -16,6 +16,22 @@ export function getThumbnail(project) {
   return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : ''
 }
 
+// YouTube serves fixed sizes; let the browser pick one for the card width and pixel density
+// (hqdefault/sddefault are 4:3 letterboxed — object-cover crops the bars)
+const YOUTUBE_SIZES = [
+  ['mqdefault', 320],
+  ['hqdefault', 480],
+  ['sddefault', 640],
+  ['maxresdefault', 1280],
+]
+
+export function getThumbnailSrcset(project) {
+  if (project.thumbnail) return ''
+  const id = getYoutubeId(project.link)
+  if (!id) return ''
+  return YOUTUBE_SIZES.map(([name, w]) => `https://i.ytimg.com/vi/${id}/${name}.jpg ${w}w`).join(', ')
+}
+
 export function getEmbedUrl(project) {
   const id = getYoutubeId(project.link)
   if (!id) return ''

@@ -30,8 +30,13 @@
     overflow: hidden;
   }
 
+  /* Faint cool glow behind the header */
   body {
     @apply font-sans;
+    background:
+      radial-gradient(ellipse 1300px 750px at 50% -60px, rgb(90 140 190 / 0.08), transparent 70%),
+      rgb(var(--bg));
+    background-repeat: no-repeat;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }

@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { categoryLabel } from '@/data/categories'
-import { formatMonthYear, getThumbnail } from '@/utils/video'
+import { formatMonthYear, getThumbnail, getThumbnailSrcset } from '@/utils/video'
 
 const props = defineProps({
   project: { type: Object, required: true },
@@ -10,6 +10,10 @@ const props = defineProps({
 const emit = defineEmits(['play'])
 
 const thumbnail = computed(() => getThumbnail(props.project))
+const srcset = computed(() => getThumbnailSrcset(props.project) || undefined)
+
+// Rendered card width per grid breakpoint (1 / 2 / 3 columns inside .wrap)
+const SIZES = '(min-width: 901px) min(392px, calc((100vw - 64px) / 3)), (min-width: 561px) calc(50vw - 32px), calc(100vw - 40px)'
 </script>
 
 <template>
@@ -19,6 +23,8 @@ const thumbnail = computed(() => getThumbnail(props.project))
     <div class="relative aspect-video overflow-hidden bg-raised">
       <img
         :src="thumbnail"
+        :srcset="srcset"
+        :sizes="srcset && SIZES"
         alt=""
         width="480"
         height="270"

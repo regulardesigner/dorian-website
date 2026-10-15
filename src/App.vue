@@ -8,6 +8,7 @@
     </a>
     <SiteHeader />
     <main>
+      <ShowreelSection />
       <ProjectGallery />
       <ContactSection />
     </main>
@@ -17,6 +18,7 @@
 
 <script setup>
 import SiteHeader from './components/SiteHeader.vue'
+import ShowreelSection from './components/ShowreelSection.vue'
 import ProjectGallery from './components/ProjectGallery.vue'
 import ContactSection from './components/ContactSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
