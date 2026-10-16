@@ -4,7 +4,7 @@ import { getEmbedUrl, getYoutubeId } from '@/utils/video'
 
 const SHOWREEL = {
   title: 'Showreel 2026',
-  link: 'https://youtu.be/PyqAmVDgmzM',
+  link: 'https://youtu.be/3uF-LqwlGbY',
 }
 
 const poster = `https://i.ytimg.com/vi/${getYoutubeId(SHOWREEL.link)}/maxresdefault.jpg`
